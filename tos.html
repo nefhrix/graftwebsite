@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms of Service for Graft.">
+  <title>Terms of Service — Graft</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper:#F1F2E9;
+      --paper-card:#FCFCF8;
+      --ink:#15170F;
+      --ink-soft:#5B5D4E;
+      --ink-faint:#8A8C79;
+      --rule:#DEDDCC;
+      --green:#4EA72E;
+      --green-dark:#3A8322;
+      --green-deep:#1E3E15;
+      --green-tint:#E4F0DB;
+      --radius:18px;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      font-size:16px;
+      line-height:1.68;
+      -webkit-font-smoothing:antialiased;
+    }
+    a { color:inherit; }
+    ::selection { background:var(--green); color:white; }
+    h1,h2,h3 {
+      font-family:'Space Grotesk',sans-serif;
+      line-height:1.12;
+      letter-spacing:-0.01em;
+      color:var(--ink);
+    }
+    h1 {
+      font-size:clamp(38px,6vw,62px);
+      margin:0 0 18px;
+    }
+    h2 {
+      font-size:clamp(23px,3vw,31px);
+      margin:0 0 16px;
+    }
+    p { margin:0 0 17px; }
+    ul { padding-left:22px; margin:0 0 20px; }
+    li { margin-bottom:7px; }
+
+    .wrap {
+      width:min(100% - 44px, 1040px);
+      margin:0 auto;
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(241,242,233,.9);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--rule);
+    }
+    .nav {
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand {
+      font-family:'Space Grotesk',sans-serif;
+      font-size:27px;
+      font-weight:700;
+      letter-spacing:-.03em;
+      text-decoration:none;
+    }
+    .brand .dot { color:var(--green); }
+    .back {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--ink-soft);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:600;
+    }
+    .back:hover { color:var(--ink); }
+
+    main { padding:72px 0 88px; }
+    .hero {
+      padding-bottom:46px;
+      border-bottom:1px solid var(--rule);
+      margin-bottom:36px;
+    }
+    .eyebrow {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-family:'Space Mono',monospace;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--green-dark);
+      margin-bottom:18px;
+    }
+    .eyebrow::before {
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--green);
+      flex:none;
+    }
+    .lede {
+      max-width:72ch;
+      color:var(--ink-soft);
+      font-size:18px;
+      margin-bottom:12px;
+    }
+    .updated {
+      color:var(--ink-faint);
+      font-family:'Space Mono',monospace;
+      font-size:12px;
+      margin:0;
+    }
+
+    .intro-note {
+      margin:0 0 34px;
+      background:var(--green-tint);
+      color:var(--green-deep);
+      border-left:3px solid var(--green);
+      border-radius:0 12px 12px 0;
+      padding:20px 22px;
+    }
+
+    .layout {
+      display:grid;
+      grid-template-columns:250px minmax(0,1fr);
+      gap:34px;
+      align-items:start;
+    }
+
+    .toc {
+      position:sticky;
+      top:100px;
+      max-height:calc(100vh - 120px);
+      overflow:auto;
+      padding:20px;
+      border:1px solid var(--rule);
+      border-radius:14px;
+      background:rgba(252,252,248,.78);
+    }
+    .toc h3 {
+      font-size:14px;
+      margin:0 0 12px;
+      font-family:'Space Mono',monospace;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      color:var(--green-dark);
+    }
+    .toc a {
+      display:block;
+      text-decoration:none;
+      font-size:12.5px;
+      line-height:1.35;
+      color:var(--ink-soft);
+      padding:6px 0;
+      border-bottom:1px solid rgba(222,221,204,.65);
+    }
+    .toc a:hover { color:var(--ink); }
+
+    .terms-card {
+      background:var(--paper-card);
+      border:1px solid var(--rule);
+      border-radius:var(--radius);
+      box-shadow:0 20px 50px -35px rgba(21,23,15,.35);
+      padding:clamp(28px,5vw,56px);
+    }
+    .terms-section {
+      scroll-margin-top:108px;
+      padding:0 0 38px;
+      margin:0 0 38px;
+      border-bottom:1px solid var(--rule);
+    }
+    .terms-section:last-child {
+      border-bottom:0;
+      margin-bottom:0;
+      padding-bottom:0;
+    }
+
+    .callout {
+      background:var(--green-tint);
+      border-left:3px solid var(--green);
+      border-radius:0 12px 12px 0;
+      padding:18px 20px;
+      margin:20px 0;
+      color:var(--green-deep);
+    }
+    .important {
+      background:#F7F7F0;
+      border:1px solid var(--rule);
+      border-radius:14px;
+      padding:22px;
+    }
+    .important p:last-child,
+    .callout p:last-child { margin-bottom:0; }
+
+    .todo {
+      display:inline-block;
+      font-family:'Space Mono',monospace;
+      font-size:11px;
+      background:#FFF2C9;
+      color:#594600;
+      border:1px solid #EAD486;
+      border-radius:6px;
+      padding:2px 7px;
+    }
+
+    footer {
+      background:var(--green-deep);
+      color:#DDEBD3;
+      padding:40px 0;
+    }
+    .footer-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      font-size:13px;
+    }
+    .footer-row a {
+      text-decoration:none;
+      opacity:.9;
+    }
+    .footer-row a:hover {
+      text-decoration:underline;
+      opacity:1;
+    }
+
+    @media (max-width:900px) {
+      .layout { grid-template-columns:1fr; }
+      .toc {
+        position:relative;
+        top:auto;
+        max-height:none;
+      }
+      .toc {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:0 18px;
+      }
+      .toc h3 { grid-column:1/-1; }
+    }
+
+    @media (max-width:620px) {
+      main { padding-top:48px; }
+      .toc { grid-template-columns:1fr; }
+      .terms-card { padding:26px 22px; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./graft-website-updated.html" aria-label="Graft home">Graft<span class="dot">.</span></a>
+    <a class="back" href="./graft-website-updated.html">← Back to Graft</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Legal</div>
+      <h1>Terms of Service<span style="color:var(--green)">.</span></h1>
+      <p class="lede">These Terms govern your access to and use of Graft, including the website, application, software, reports, document-processing tools, invoicing tools and related services.</p>
+      <p class="updated">Last updated: 12 August 2026</p>
+    </section>
+
+    <div class="intro-note">
+      <strong>Please read these Terms carefully.</strong> By creating an account, purchasing a subscription, accessing or using the Service, you agree to be bound by these Terms. If you do not agree, you must not use the Service.
+    </div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Terms table of contents">
+        <h3>Contents</h3>
+        <a href="#section-1">1. About Graft</a>
+<a href="#section-2">2. Who operates Graft</a>
+<a href="#section-3">3. Business and professional use</a>
+<a href="#section-4">4. Eligibility</a>
+<a href="#section-5">5. Your account</a>
+<a href="#section-6">6. Account security</a>
+<a href="#section-7">7. Information you provide</a>
+<a href="#section-8">8. Document quality</a>
+<a href="#section-9">9. Duplicate document handling</a>
+<a href="#section-10">10. Source records</a>
+<a href="#section-11">11. Document processing</a>
+<a href="#section-12">12. Azure Document Intelligence</a>
+<a href="#section-13">13. Categorisation</a>
+<a href="#section-14">14. Algorithms and accountant input</a>
+<a href="#section-15">15. Transaction records</a>
+<a href="#section-16">16. Editing information</a>
+<a href="#section-17">17. Invoicing functionality</a>
+<a href="#section-18">18. Sending invoices</a>
+<a href="#section-19">19. Reports</a>
+<a href="#section-20">20. Accountant sharing</a>
+<a href="#section-21">21. Exports</a>
+<a href="#section-22">22. Data storage</a>
+<a href="#section-23">23. Personal data</a>
+<a href="#section-24">24. Personal data about other people</a>
+<a href="#section-25">25. Confidential information</a>
+<a href="#section-26">26. Analytics</a>
+<a href="#section-27">27. Communications</a>
+<a href="#section-28">28. Early-access forms</a>
+<a href="#section-29">29. Subscriptions</a>
+<a href="#section-30">30. Stripe</a>
+<a href="#section-31">31. Recurring subscriptions</a>
+<a href="#section-32">32. Pricing changes</a>
+<a href="#section-33">33. Taxes on subscription fees</a>
+<a href="#section-34">34. Trials and promotions</a>
+<a href="#section-35">35. Acceptable use</a>
+<a href="#section-36">36. Abuse and security monitoring</a>
+<a href="#section-37">37. Suspension</a>
+<a href="#section-38">38. Termination by you</a>
+<a href="#section-39">39. Termination by Graft</a>
+<a href="#section-40">40. Changes and development of Graft</a>
+<a href="#section-41">41. Important nature of Graft&#x27;s outputs</a>
+<a href="#section-42">42. Estimates and automated calculations</a>
+<a href="#section-43">43. Your duty to review important information</a>
+<a href="#section-44">44. Taxes, accounts and official filings</a>
+<a href="#section-45">45. Your responsibility for filings</a>
+<a href="#section-46">46. No professional relationship with contributing accountants</a>
+<a href="#section-47">47. Availability and technical operation</a>
+<a href="#section-48">48. No guarantee of uninterrupted operation</a>
+<a href="#section-49">49. Third-party services</a>
+<a href="#section-50">50. Third-party websites</a>
+<a href="#section-51">51. Backups and recovery</a>
+<a href="#section-52">52. Data deletion</a>
+<a href="#section-53">53. Support</a>
+<a href="#section-54">54. Feature requests</a>
+<a href="#section-55">55. Feedback</a>
+<a href="#section-56">56. Intellectual property</a>
+<a href="#section-57">57. Your content</a>
+<a href="#section-58">58. Trademarks</a>
+<a href="#section-59">59. Reverse engineering</a>
+<a href="#section-60">60. Beta and experimental functionality</a>
+<a href="#section-61">61. Disclaimers</a>
+<a href="#section-62">62. Limitation of liability</a>
+<a href="#section-63">63. Tax-related losses</a>
+<a href="#section-64">64. Indirect and business losses</a>
+<a href="#section-65">65. Liability cap</a>
+<a href="#section-66">66. Liabilities that cannot be excluded</a>
+<a href="#section-67">67. User indemnity</a>
+<a href="#section-68">68. Force majeure and events outside our control</a>
+<a href="#section-69">69. Changes to these Terms</a>
+<a href="#section-70">70. Notices</a>
+<a href="#section-71">71. Assignment</a>
+<a href="#section-72">72. No partnership</a>
+<a href="#section-73">73. No third-party rights</a>
+<a href="#section-74">74. No waiver</a>
+<a href="#section-75">75. Severability</a>
+<a href="#section-76">76. Headings</a>
+<a href="#section-77">77. Entire agreement</a>
+<a href="#section-78">78. Conflicts between documents</a>
+<a href="#section-79">79. Governing law</a>
+<a href="#section-80">80. Disputes</a>
+<a href="#section-81">81. Continuing provisions</a>
+<a href="#section-82">82. Contact</a>
+      </nav>
+
+      <article class="terms-card">
+        <section id="section-1" class="terms-section"><h2>1. About Graft</h2>
+<p>Graft is a software platform intended to help sole traders, freelancers, contractors, tradespeople, consultants, micro-businesses and other business users organise financial administration.</p>
+<p>Depending on the features available to your account, Graft may allow you to:</p>
+<ul>
+<li>photograph or upload receipts;</li>
+<li>upload invoices and statements;</li>
+<li>forward financial documents;</li>
+<li>extract information from documents;</li>
+<li>organise financial records;</li>
+<li>automatically categorise transactions;</li>
+<li>detect duplicate documents;</li>
+<li>search financial records;</li>
+<li>create invoices;</li>
+<li>maintain customer and supplier information;</li>
+<li>generate financial summaries;</li>
+<li>calculate totals from information contained within your records;</li>
+<li>export information;</li>
+<li>create PDF reports;</li>
+<li>create spreadsheet or Excel reports;</li>
+<li>prepare information for review by an accountant or bookkeeper; and</li>
+<li>use other bookkeeping, administrative and financial-record-management tools.</li>
+</ul>
+<p>Features may be added, modified or removed over time in accordance with these Terms.</p>
+</section>
+<section id="section-2" class="terms-section"><h2>2. Who operates Graft</h2>
+<p>Graft is currently operated by:</p>
+<div class="callout">
+<strong><span class="todo">ADD YOUR FULL LEGAL NAME</span>, trading as Graft</strong><br>
+Email: <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a><br>
+Business or correspondence address: <span class="todo">ADD YOUR ADDRESS</span>
+</div>
+<p>References in these Terms to “<strong>Graft</strong>”, “<strong>we</strong>”, “<strong>us</strong>” and “<strong>our</strong>” mean the person or legal entity operating the Service at the relevant time.</p>
+<p>If Graft is subsequently operated through an incorporated company or other legal entity, we may update these Terms to identify that entity as the operator of the Service.</p>
+</section>
+<section id="section-3" class="terms-section"><h2>3. Business and professional use</h2>
+<p>Graft is designed primarily for people using the Service in connection with a trade, business, profession or self-employed activity.</p>
+<p>The Service is not designed as a personal financial-advice, investment-advice or consumer budgeting service.</p>
+<p>If mandatory consumer laws nevertheless apply to you, nothing in these Terms is intended to remove rights that cannot lawfully be excluded or restricted.</p>
+</section>
+<section id="section-4" class="terms-section"><h2>4. Eligibility</h2>
+<p>You must be legally capable of entering into a binding agreement in order to create a Graft account.</p>
+<p>If you use Graft on behalf of a business, partnership, company, organisation or other entity, you represent that you have authority to agree to these Terms on its behalf.</p>
+<p>In that case, references to “you” include that entity where appropriate.</p>
+<p>You must not create an account using false identity information or impersonate another person or business.</p>
+</section>
+<section id="section-5" class="terms-section"><h2>5. Your account</h2>
+<p>Some features require a Graft account.</p>
+<p>You agree to provide information that is reasonably accurate, current and complete when creating and maintaining your account.</p>
+<p>You are responsible for keeping your login details and authentication credentials confidential.</p>
+<p>You must not knowingly allow an unauthorised person to access your account.</p>
+<p>You should notify us promptly at <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a> if you believe your account has been compromised, your password has been disclosed, an unauthorised person has accessed your account, or suspicious activity has occurred.</p>
+<p>We may require you to reset credentials or take other reasonable security measures.</p>
+</section>
+<section id="section-6" class="terms-section"><h2>6. Account security</h2>
+<p>You are responsible for taking reasonable steps to secure the devices and email accounts you use to access Graft.</p>
+<p>This includes, where appropriate, using strong passwords, keeping your device operating system updated, protecting access to your email account, avoiding shared credentials, using available authentication controls, and notifying us of suspicious activity.</p>
+<p>Graft is not responsible for losses caused solely by your intentional disclosure of account credentials or your failure to take reasonable account-security precautions, except where applicable law provides otherwise.</p>
+</section>
+<section id="section-7" class="terms-section"><h2>7. Information you provide</h2>
+<p>You are responsible for documents, data and information that you provide to Graft.</p>
+<p>This may include receipts, invoices, statements, photographs, PDFs, customer information, supplier information, transaction information, tax information, invoice details, descriptions, notes, and other business records.</p>
+<p>You should ensure that information you provide is reasonably complete and accurate.</p>
+</section>
+<section id="section-8" class="terms-section"><h2>8. Document quality</h2>
+<p>The quality of automated document analysis may depend on the quality of the document supplied.</p>
+<p>You should provide documents that are reasonably clear, legible, complete, correctly oriented, sufficiently high resolution, and free from unnecessary obstruction.</p>
+<p>A damaged, blurred, cropped, altered, corrupted, incomplete or illegible document may result in incorrect information being extracted from that document.</p>
+</section>
+<section id="section-9" class="terms-section"><h2>9. Duplicate document handling</h2>
+<p>Graft includes functionality intended to identify and handle duplicate documents.</p>
+<p>Where Graft identifies a document as a duplicate, the Service may prevent it from being treated as a new independent financial record or otherwise flag or process it according to the functionality available at that time.</p>
+<p>Duplicate-document detection is part of the Graft workflow and is intended to prevent the same underlying document from being counted repeatedly.</p>
+<p>Users should not deliberately attempt to circumvent duplicate-detection systems.</p>
+</section>
+<section id="section-10" class="terms-section"><h2>10. Source records</h2>
+<p>Graft assists you in organising information from source documents.</p>
+<p>You remain responsible for determining what original records you are legally required to retain.</p>
+<p>You should not destroy an original receipt, invoice, statement, tax record or other legally relevant record merely because it has been uploaded to Graft unless you have determined that retaining only the electronic copy is appropriate and lawful for your circumstances.</p>
+<p>Where appropriate, consult your accountant, tax adviser, solicitor or other professional regarding record-retention obligations.</p>
+</section>
+<section id="section-11" class="terms-section"><h2>11. Document processing</h2>
+<p>Graft may automatically read information contained in documents provided to the Service.</p>
+<p>This can include supplier names, customer names, invoice numbers, receipt numbers, dates, descriptions, transaction amounts, tax amounts, VAT information, totals, currencies, and other fields appearing on financial documents.</p>
+<p>Automated extraction allows Graft to organise and present financial information without requiring every field to be entered manually.</p>
+</section>
+<section id="section-12" class="terms-section"><h2>12. Azure Document Intelligence</h2>
+<p>Graft may use <strong>Microsoft Azure Document Intelligence</strong> and associated Microsoft Azure services to assist with document analysis and data extraction.</p>
+<p>Documents or relevant document information may be transmitted to those services for processing.</p>
+<p>The use of third-party processing infrastructure is also subject to our Privacy Policy and the applicable arrangements between Graft and its providers.</p>
+</section>
+<section id="section-13" class="terms-section"><h2>13. Categorisation</h2>
+<p>Graft may assign categories or classifications to records based on the information available to it.</p>
+<p>Categories may include business-expense categories, transaction types or other organisational classifications.</p>
+<p>Categorisation is intended to make record keeping easier.</p>
+<p>A category displayed by Graft should not automatically be interpreted as a determination of deductibility, tax treatment, VAT treatment, capital or revenue treatment, accounting treatment, regulatory treatment, or legal treatment.</p>
+<p>Those matters may depend on facts that are not contained in the document itself.</p>
+</section>
+<section id="section-14" class="terms-section"><h2>14. Algorithms and accountant input</h2>
+<p>Graft uses algorithms and automated rules to analyse, organise and categorise financial information.</p>
+<p>The methodology, categorisation approach and algorithms used by Graft have been developed with input from accountants.</p>
+<p>The purpose of that input is to help us develop a useful bookkeeping and administration product.</p>
+<p>However, accountant involvement in the design or development of Graft does not mean that an accountant personally examines, approves or certifies every output generated for an individual user.</p>
+<p>No accountant involved in product development should be treated as your personal accountant solely because you use Graft.</p>
+</section>
+<section id="section-15" class="terms-section"><h2>15. Transaction records</h2>
+<p>Graft is designed to maintain organised transaction records based on the documents and information supplied to the Service.</p>
+<p>Its duplicate-document handling and transaction-processing systems are designed to prevent the same underlying source document from being treated repeatedly as a new transaction.</p>
+<p>You remain responsible for making sure that you provide Graft with the source documents and information that you want included in your records.</p>
+<p>Graft cannot process a document or transaction that you never provide to the Service or otherwise make available through an enabled integration.</p>
+</section>
+<section id="section-16" class="terms-section"><h2>16. Editing information</h2>
+<p>Where functionality permits, you may be able to correct, modify or supplement information extracted or generated by Graft.</p>
+<p>You should use available correction tools if you identify information that is inaccurate.</p>
+<p>Changes made by you may affect totals, reports, transaction categories, summaries, exports, and other outputs.</p>
+<p>You are responsible for checking user-entered amendments.</p>
+</section>
+<section id="section-17" class="terms-section"><h2>17. Invoicing functionality</h2>
+<p>Graft may allow users to create invoices.</p>
+<p>You are responsible for information appearing on invoices you create, including your trading details, customer information, invoice numbers, invoice dates, payment terms, descriptions of goods or services, VAT information, pricing, payment instructions, and any legally required information.</p>
+<p>Graft provides software for creating and managing invoices but does not independently certify that an invoice satisfies every legal, tax or regulatory requirement applicable to your particular business.</p>
+</section>
+<section id="section-18" class="terms-section"><h2>18. Sending invoices</h2>
+<p>Where Graft allows invoices to be sent electronically, you are responsible for ensuring that the recipient information is correct, you are authorised to contact the recipient, the invoice content is accurate, and the communication is lawful.</p>
+<p>Delivery of an electronic message can depend on third-party email providers, spam filters, internet services and recipient systems.</p>
+<p>A message shown as sent should not automatically be treated as proof that the intended recipient opened or reviewed it.</p>
+</section>
+<section id="section-19" class="terms-section"><h2>19. Reports</h2>
+<p>Graft may generate reports based on information associated with your account.</p>
+<p>Reports may be available in formats including PDF, spreadsheet, Excel-compatible files, or other electronic formats.</p>
+<p>Reports are intended to help you review and share organised records.</p>
+<p>They may be provided to your accountant, your bookkeeper, members of your business, advisers, or other people you choose.</p>
+<p>You are responsible for deciding who receives an exported report.</p>
+</section>
+<section id="section-20" class="terms-section"><h2>20. Accountant sharing</h2>
+<p>Graft may provide functionality that makes it easier to share records or reports with an accountant.</p>
+<p>Providing information to an accountant does not mean that Graft has instructed that accountant or created a professional relationship between Graft and that accountant.</p>
+<p>The accountant remains responsible for the professional services they separately agree to provide to you.</p>
+<p>Your accountant may request corrections, additional documentation or different classifications after reviewing information generated by Graft.</p>
+</section>
+<section id="section-21" class="terms-section"><h2>21. Exports</h2>
+<p>Exported information reflects the information available within Graft at the time the export is produced.</p>
+<p>If you subsequently edit a transaction, upload additional information, change a category, correct an amount, or make another change, an earlier export may no longer reflect the current information in your account.</p>
+<p>You are responsible for ensuring that you use the appropriate version of an export.</p>
+</section>
+<section id="section-22" class="terms-section"><h2>22. Data storage</h2>
+<p>Graft may use <strong>Supabase</strong> to provide database, authentication, application and backend infrastructure.</p>
+<p>Graft may use <strong>Cloudflare R2</strong> for document and object storage.</p>
+<p>Our handling of personal data is described in our Privacy Policy.</p>
+<p>Use of third-party infrastructure does not transfer ownership of your uploaded documents to those infrastructure providers.</p>
+</section>
+<section id="section-23" class="terms-section"><h2>23. Personal data</h2>
+<p>Your use of Graft is also subject to our Privacy Policy.</p>
+<p>The Privacy Policy explains matters including what personal data we collect, why we use it, third-party providers, storage, document processing, analytics, international transfers, retention, and data-protection rights.</p>
+<p>The Privacy Policy forms part of the legal framework governing use of the Service but is separate from these Terms.</p>
+</section>
+<section id="section-24" class="terms-section"><h2>24. Personal data about other people</h2>
+<p>Financial records can contain information relating to customers, suppliers, workers, contractors or other individuals.</p>
+<p>If you provide personal data relating to another person, you are responsible for ensuring that your collection and use of that information is lawful.</p>
+<p>Where applicable, you may be the data controller in relation to personal information contained in documents you upload, while Graft may process that information on your behalf.</p>
+<p>Additional data-processing terms may apply where required.</p>
+</section>
+<section id="section-25" class="terms-section"><h2>25. Confidential information</h2>
+<p>We recognise that financial records may contain commercially sensitive information.</p>
+<p>We use reasonable technical and organisational measures intended to protect information stored through the Service.</p>
+<p>You must also keep confidential any non-public information about Graft that you receive in circumstances where a reasonable person would understand that information to be confidential.</p>
+<p>This section does not prevent disclosure required by law.</p>
+</section>
+<section id="section-26" class="terms-section"><h2>26. Analytics</h2>
+<p>Graft may use <strong>Google Analytics</strong> or similar analytics systems in accordance with our Privacy Policy and applicable consent requirements.</p>
+<p>Analytics may help us understand how visitors find Graft, which pages are used, which features are used, technical performance, errors, general usage patterns, and opportunities to improve the Service.</p>
+<p>Analytics information is not intended to replace information contained in your financial records.</p>
+</section>
+<section id="section-27" class="terms-section"><h2>27. Communications</h2>
+<p>We may contact you regarding your account, security, billing, changes to the Service, technical issues, customer support, important changes to these Terms, changes to our Privacy Policy, and other administrative matters.</p>
+<p>Where permitted, we may also send product announcements or marketing communications.</p>
+<p>Marketing preferences can be managed in accordance with applicable law and our Privacy Policy.</p>
+</section>
+<section id="section-28" class="terms-section"><h2>28. Early-access forms</h2>
+<p>Graft may use <strong>FormSubmit</strong> to transmit information submitted through website forms.</p>
+<p>For example, FormSubmit may transmit an early-access registration to <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a>.</p>
+<p>Submission of a form does not guarantee acceptance into any beta, preview or early-access programme.</p>
+</section>
+<section id="section-29" class="terms-section"><h2>29. Subscriptions</h2>
+<p>Some Graft functionality may require a paid subscription.</p>
+<p>Subscription details may include price, billing interval, included functionality, promotional terms, trial periods, and renewal arrangements.</p>
+<p>The applicable terms will be displayed when you purchase or activate the subscription.</p>
+</section>
+<section id="section-30" class="terms-section"><h2>30. Stripe</h2>
+<p>Payments may be processed using <strong>Stripe</strong>.</p>
+<p>Graft generally does not need to directly receive your complete card number where Stripe's payment infrastructure handles the payment.</p>
+<p>Stripe may provide Graft with information such as payment status, subscription status, customer identifier, transaction identifier, and limited billing information.</p>
+<p>Payment processing may also be subject to Stripe's applicable terms.</p>
+</section>
+<section id="section-31" class="terms-section"><h2>31. Recurring subscriptions</h2>
+<p>Where a subscription is described as recurring, it may renew automatically at the end of each billing period until cancelled.</p>
+<p>The billing frequency and price will be shown when the subscription is purchased.</p>
+<p>You are responsible for cancelling a recurring subscription if you no longer want it to renew.</p>
+<p>Cancellation normally prevents future renewals rather than retrospectively cancelling a billing period that has already begun, subject to mandatory legal rights.</p>
+</section>
+<section id="section-32" class="terms-section"><h2>32. Pricing changes</h2>
+<p>We may change Graft's subscription prices.</p>
+<p>Where an existing recurring subscription is materially affected, we will provide reasonable advance notice where required or appropriate.</p>
+<p>Continued use after a notified change takes effect may constitute acceptance of the new price.</p>
+<p>You may cancel before the new price becomes applicable if you do not wish to continue.</p>
+</section>
+<section id="section-33" class="terms-section"><h2>33. Taxes on subscription fees</h2>
+<p>Subscription prices may be subject to VAT or other applicable taxes.</p>
+<p>Where required, applicable taxes may be added or included in accordance with relevant law.</p>
+<p>You are responsible for providing accurate information where tax treatment of your purchase depends on information you provide.</p>
+</section>
+<section id="section-34" class="terms-section"><h2>34. Trials and promotions</h2>
+<p>Graft may offer free trials, founding-member pricing, introductory rates, promotional discounts, early-access plans, or other offers.</p>
+<p>Promotional terms may differ from standard subscription terms.</p>
+<p>Unless expressly stated otherwise, a promotion does not create a right to receive the promotional price indefinitely.</p>
+</section>
+<section id="section-35" class="terms-section"><h2>35. Acceptable use</h2>
+<p>You must use Graft lawfully.</p>
+<p>You must not use Graft to commit fraud; facilitate deliberate tax evasion; upload documents you have obtained unlawfully; intentionally upload malicious software; attempt to compromise Graft's security; access another user's account without authorisation; interfere with the normal operation of the Service; overwhelm or attack our infrastructure; scrape the Service in an abusive manner; circumvent technical restrictions; manipulate duplicate-detection features for fraudulent purposes; represent automated outputs as independently audited or certified where they are not; infringe intellectual property rights; misuse another person's personal data; or use Graft for any unlawful activity.</p>
+</section>
+<section id="section-36" class="terms-section"><h2>36. Abuse and security monitoring</h2>
+<p>We may use technical controls to detect suspicious access, unusual account activity, attempted security breaches, abuse, excessive automated requests, malicious uploads, and other threats.</p>
+<p>We may temporarily restrict access where reasonably necessary to protect Graft, its users or third parties.</p>
+</section>
+<section id="section-37" class="terms-section"><h2>37. Suspension</h2>
+<p>We may suspend some or all access to an account where reasonably necessary, including where payment remains overdue, we reasonably suspect fraud, there is a security risk, these Terms have been materially breached, continued access may harm the Service or another user, we are required to do so by law, or an account is being used unlawfully.</p>
+<p>Where appropriate, we may provide an opportunity to resolve the issue.</p>
+</section>
+<section id="section-38" class="terms-section"><h2>38. Termination by you</h2>
+<p>You may stop using Graft at any time.</p>
+<p>Where account-deletion functionality is available, you may use that functionality.</p>
+<p>You may also contact <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a> regarding account closure.</p>
+<p>Ending your account does not automatically eliminate obligations that arose before termination, including outstanding payment obligations.</p>
+<p>Certain information may continue to be retained where permitted or required under our Privacy Policy and applicable law.</p>
+</section>
+<section id="section-39" class="terms-section"><h2>39. Termination by Graft</h2>
+<p>We may terminate access where reasonably necessary because you materially or repeatedly breach these Terms, you use Graft unlawfully, you create a serious security risk, payment obligations remain unresolved, continued provision of the Service becomes unlawful, Graft ceases operating, or circumstances make continued provision of the Service commercially or technically impracticable.</p>
+<p>Where reasonably possible, we will attempt to provide notice before termination that is not urgent.</p>
+</section>
+<section id="section-40" class="terms-section"><h2>40. Changes and development of Graft</h2>
+<p>Graft is an evolving software product.</p>
+<p>We may change interfaces, workflows, algorithms, document-processing methods, categories, integrations, report formats, infrastructure, storage providers, functionality, pricing, and other aspects of the Service.</p>
+<p>A feature available today may be modified or replaced in the future.</p>
+<p>We do not promise that every individual feature will exist indefinitely.</p>
+</section>
+<section id="section-41" class="terms-section"><h2>41. Important nature of Graft&#x27;s outputs</h2>
+<div class="important">
+<p><strong>This section and the sections immediately following it are important.</strong></p>
+<p>Graft is an administrative and bookkeeping software tool.</p>
+<p><strong>Graft is not your accountant, tax adviser, auditor, solicitor, financial adviser or investment adviser.</strong></p>
+<p>Nothing generated by Graft constitutes personalised accounting advice, tax advice, legal advice, audit advice, investment advice, or financial advice.</p>
+<p>Using Graft does not create an accountant-client, adviser-client, solicitor-client, fiduciary or similar professional relationship.</p>
+</div>
+</section>
+<section id="section-42" class="terms-section"><h2>42. Estimates and automated calculations</h2>
+<div class="important">
+<p><strong>Figures, calculations, classifications, categories, summaries and other analytical outputs generated by Graft should be treated as estimates and working information unless they have been independently verified.</strong></p>
+<p>Graft uses automated document-processing technology and algorithms to interpret information.</p>
+<p>The algorithms and methodology have been developed with input from accountants, but individual outputs generated for your account are not automatically reviewed by an accountant, approved by an accountant, audited, professionally certified, approved by Revenue, approved by a tax authority, or guaranteed to reflect the tax treatment applicable to your individual circumstances.</p>
+<p>Automated processing can produce incorrect results.</p>
+<p>For example, Graft may misread a field contained in a document, extract an incorrect number, misinterpret a date, identify the wrong supplier or customer information, assign an unsuitable category, misunderstand VAT information, apply a classification that is not appropriate to your circumstances, calculate a figure from incorrect source information, misinterpret unclear document content, or otherwise produce an inaccurate estimate or classification.</p>
+<p>This does not mean that duplicate documents are expected to create duplicate financial records. Graft separately uses duplicate-document handling as described in these Terms.</p>
+</div>
+</section>
+<section id="section-43" class="terms-section"><h2>43. Your duty to review important information</h2>
+<div class="important">
+<p>You are responsible for reviewing important outputs before relying on them.</p>
+<p>You should compare information generated by Graft against appropriate source records where accuracy matters.</p>
+<p>In particular, you should review transaction values, VAT, dates, classifications, expense categories, totals, reports, customer information, and tax-sensitive information.</p>
+<p>If something appears incorrect, you should correct it where functionality permits or raise it with us or your professional adviser.</p>
+</div>
+</section>
+<section id="section-44" class="terms-section"><h2>44. Taxes, accounts and official filings</h2>
+<div class="important">
+<p><strong>You must not rely exclusively on Graft when preparing or submitting tax returns, VAT returns, annual accounts, statutory accounts or other official financial filings.</strong></p>
+<p>Before using figures or classifications produced by Graft for a tax filing or other material official purpose, you should have the relevant information reviewed by a suitably qualified accountant, tax adviser or other appropriate professional.</p>
+<p><strong>Always double-check Graft's figures with an accountant or qualified tax professional before using those figures to file taxes.</strong></p>
+<p>You remain responsible for determining what income must be declared, what expenses may be claimed, whether expenditure is deductible, correct VAT treatment, correct tax classifications, correct accounting treatment, applicable filing dates, applicable payment dates, whether registration obligations apply, whether documentation is sufficient, and what information is ultimately submitted to an authority.</p>
+<p>A Graft category is an organisational aid and is not a binding tax determination.</p>
+</div>
+</section>
+<section id="section-45" class="terms-section"><h2>45. Your responsibility for filings</h2>
+<div class="important">
+<p>You remain responsible for every return, declaration, claim, set of accounts, VAT submission or other official filing that you or somebody acting for you ultimately submits.</p>
+<p>This remains the case where information generated by Graft was used as part of preparing that submission.</p>
+<p>You are responsible for deciding whether to accept advice from your accountant, tax adviser or other professional.</p>
+<p>Graft does not certify your tax return merely by generating a report that is later used in connection with it.</p>
+<p>If a tax authority, accountant or adviser requires supporting information, adjustments or a different classification, you are responsible for dealing with that requirement.</p>
+</div>
+</section>
+<section id="section-46" class="terms-section"><h2>46. No professional relationship with contributing accountants</h2>
+<div class="important">
+<p>Accountants or accounting professionals may have contributed knowledge, experience, feedback or advice to the development of Graft's general algorithms, categorisation methodology or product design.</p>
+<p>That involvement does not mean that those professionals know who you are, know your business, know your personal circumstances, have reviewed your source documents, have reviewed your Graft account, have approved a category assigned to you, have certified a report generated for you, are acting as your accountant, owe you a professional duty as your adviser, or accept responsibility for decisions you make using Graft.</p>
+<p>A professional-client relationship must be established separately between you and the relevant professional.</p>
+</div>
+</section>
+<section id="section-47" class="terms-section"><h2>47. Availability and technical operation</h2>
+<p>We aim to make Graft reliable and useful, but software services can occasionally become unavailable.</p>
+<p>Availability may be affected by maintenance, deployments, software bugs, network problems, infrastructure failures, cloud-service interruptions, third-party failures, security incidents, events outside our reasonable control, or emergency maintenance.</p>
+<p>We may temporarily restrict functionality where necessary to maintain or secure the Service.</p>
+</section>
+<section id="section-48" class="terms-section"><h2>48. No guarantee of uninterrupted operation</h2>
+<p>To the fullest extent permitted by law, we do not warrant that Graft will operate continuously, without interruption, without delay, without bugs, on every device, with every browser, with every document format, or with every third-party service.</p>
+<p>We may set reasonable technical requirements for supported devices and software.</p>
+</section>
+<section id="section-49" class="terms-section"><h2>49. Third-party services</h2>
+<p>Graft depends on third-party technology providers.</p>
+<p>Current providers may include Microsoft Azure / Azure Document Intelligence, Supabase, Cloudflare R2, Stripe, Google Analytics, Google / Gmail, FormSubmit, and other infrastructure and service providers.</p>
+<p>An interruption or modification to a third-party service may affect Graft.</p>
+<p>We may replace a provider with another provider where appropriate.</p>
+</section>
+<section id="section-50" class="terms-section"><h2>50. Third-party websites</h2>
+<p>Graft may contain links to websites operated by third parties.</p>
+<p>A link does not necessarily mean that Graft endorses that third party, controls its services, guarantees its content, or accepts responsibility for its practices.</p>
+<p>Third-party services may have their own terms and privacy policies.</p>
+</section>
+<section id="section-51" class="terms-section"><h2>51. Backups and recovery</h2>
+<p>We may maintain backups or other technical recovery systems as part of our infrastructure.</p>
+<p>Backup systems are intended to support service continuity and data recovery.</p>
+<p>They should not be treated as an unlimited historical archive accessible on demand.</p>
+<p>You should export or retain copies of information that is particularly important to your own business-continuity requirements.</p>
+</section>
+<section id="section-52" class="terms-section"><h2>52. Data deletion</h2>
+<p>Deletion of information from an active account may not result in immediate deletion from every technical backup.</p>
+<p>Backup copies may remain temporarily until they are overwritten or deleted according to applicable retention processes.</p>
+<p>Our Privacy Policy provides further information concerning personal-data retention.</p>
+</section>
+<section id="section-53" class="terms-section"><h2>53. Support</h2>
+<p>We may provide support through <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a>.</p>
+<p>Support availability, response times and methods may change.</p>
+<p>Unless a separate service-level agreement expressly states otherwise, we do not guarantee a particular response time.</p>
+<p>Support communications are intended to help with use of the Service and are not accounting or tax advice.</p>
+</section>
+<section id="section-54" class="terms-section"><h2>54. Feature requests</h2>
+<p>You may suggest improvements or new features.</p>
+<p>We are not required to implement a requested feature.</p>
+<p>A statement that we are considering a feature does not create a binding commitment to release it.</p>
+<p>Development priorities may change.</p>
+</section>
+<section id="section-55" class="terms-section"><h2>55. Feedback</h2>
+<p>If you voluntarily provide feedback, ideas, suggestions or recommendations concerning Graft, you grant us permission to use that feedback to improve the Service, design functionality, resolve issues, conduct product development, and operate our business.</p>
+<p>We do not owe compensation solely because we use voluntarily provided product feedback.</p>
+<p>This does not give us ownership of your financial documents or personal data.</p>
+</section>
+<section id="section-56" class="terms-section"><h2>56. Intellectual property</h2>
+<p>Except for information owned by users or third parties, Graft and its associated intellectual property belong to Graft or its licensors.</p>
+<p>This can include source code, object code, algorithms, software, workflows, interfaces, visual design, branding, logos, reports and report templates, documentation, product text, database structures, and other proprietary material.</p>
+<p>Your subscription gives you a limited right to use the Service in accordance with these Terms.</p>
+<p>It does not transfer ownership of Graft's intellectual property.</p>
+</section>
+<section id="section-57" class="terms-section"><h2>57. Your content</h2>
+<p>You retain ownership of documents and other original material that you upload to Graft.</p>
+<p>You grant Graft a limited licence to host, store, reproduce, transmit, process, analyse, convert, display, and otherwise technically handle your content to the extent reasonably necessary to provide, maintain, secure and improve the Service.</p>
+<p>This licence ends when the relevant content is no longer reasonably required, subject to backups, retention requirements and other matters described in our Privacy Policy.</p>
+</section>
+<section id="section-58" class="terms-section"><h2>58. Trademarks</h2>
+<p>The Graft name, branding and logos may be protected by trademark, passing-off or other intellectual-property rights.</p>
+<p>You must not use Graft branding in a manner that falsely suggests endorsement, certification, partnership, sponsorship, or affiliation.</p>
+<p>Normal references to Graft as the software you use are permitted.</p>
+</section>
+<section id="section-59" class="terms-section"><h2>59. Reverse engineering</h2>
+<p>Except to the extent applicable law expressly provides otherwise, you must not reverse engineer Graft, attempt to obtain proprietary source code, bypass access restrictions, replicate proprietary algorithms, decompile the Service, interfere with technical protections, or use the Service to construct an unauthorised substantially identical competing copy.</p>
+</section>
+<section id="section-60" class="terms-section"><h2>60. Beta and experimental functionality</h2>
+<p>Some functionality may be labelled beta, preview, experimental, early access, or similar wording.</p>
+<p>Such functionality may change, contain bugs, be incomplete, produce unexpected outputs, have limited support, or be withdrawn.</p>
+<p>You should exercise additional caution when using experimental functionality.</p>
+</section>
+<section id="section-61" class="terms-section"><h2>61. Disclaimers</h2>
+<div class="important">
+<p>To the fullest extent permitted by applicable law, the Service is provided on an <strong>“as available”</strong> basis.</p>
+<p>Except for rights or warranties that cannot lawfully be excluded, we do not guarantee that every extracted field will be correct, every category will be appropriate, every calculation will reflect your specific tax circumstances, an expense will be deductible, Revenue will accept a particular treatment, VAT treatment will be correct, a report will satisfy every accounting requirement, use of Graft will ensure regulatory compliance, using Graft will reduce your tax, using Graft will eliminate the need for an accountant, or every feature will always operate without error.</p>
+</div>
+</section>
+<section id="section-62" class="terms-section"><h2>62. Limitation of liability</h2>
+<div class="important">
+<p><strong>This section affects the extent to which Graft may be responsible for losses.</strong></p>
+<p>To the fullest extent permitted by applicable law, Graft and its operator shall not be liable for losses arising solely from a user's reliance on an automated figure, category, estimate or report without carrying out reasonable verification where these Terms expressly state that such verification is required.</p>
+<p>Without limiting that principle, and to the fullest extent permitted by law, Graft shall not be liable for losses resulting from an inaccurate automatically extracted field, an incorrect automated categorisation, an inaccurate automated estimate, an incorrect calculation resulting from incorrect or unclear source information, a user failing to supply relevant source information, a tax treatment selected without professional review, reliance on Graft as a substitute for professional tax or accounting advice, use of an outdated export, incorrect information entered by a user, a user ignoring an identifiable error, failure to obtain appropriate professional advice, third-party systems outside Graft's reasonable control, or unlawful or unauthorised use of the Service.</p>
+<p>Nothing in this section removes liability that cannot lawfully be excluded.</p>
+</div>
+</section>
+<section id="section-63" class="terms-section"><h2>63. Tax-related losses</h2>
+<div class="important">
+<p>To the fullest extent permitted by law, Graft is not responsible for tax consequences resulting from your decision to file or submit information without obtaining appropriate review.</p>
+<p>This may include, where legally excludable, tax underpayments, tax overpayments, interest, penalties, surcharges, denied deductions, rejected expense claims, rejected VAT claims, amended assessments, professional costs incurred correcting a filing, and other consequences arising from incorrect tax treatment.</p>
+<p>This exclusion does not apply to liability that applicable law prohibits us from excluding.</p>
+</div>
+</section>
+<section id="section-64" class="terms-section"><h2>64. Indirect and business losses</h2>
+<div class="important">
+<p>To the fullest extent permitted by applicable law, Graft shall not be liable for indirect loss, consequential loss, loss of profit, loss of revenue, loss of opportunity, loss of anticipated savings, loss of goodwill, business interruption, or similar commercial losses, to the extent those losses may lawfully be excluded.</p>
+</div>
+</section>
+<section id="section-65" class="terms-section"><h2>65. Liability cap</h2>
+<div class="important">
+<p>Where Graft has liability to you that may legally be limited, our total aggregate liability arising from or connected with the Service or these Terms shall, to the fullest extent permitted by applicable law, not exceed the greater of:</p>
+<p><strong>(a) €100; or</strong></p>
+<p><strong>(b) the total subscription fees actually paid by you to Graft during the 12 months immediately preceding the event giving rise to the claim.</strong></p>
+<p>Claims arising out of substantially the same circumstances will be treated as related for the purposes of this limit.</p>
+<p>This cap does not apply where applicable law prohibits the liability in question from being capped.</p>
+</div>
+</section>
+<section id="section-66" class="terms-section"><h2>66. Liabilities that cannot be excluded</h2>
+<div class="important">
+<p>Nothing in these Terms excludes or limits liability where doing so is prohibited by law.</p>
+<p>Nothing in these Terms is intended to exclude or restrict mandatory statutory rights.</p>
+<p>Where an exclusion or limitation is not fully enforceable, it shall apply to the maximum extent that is legally enforceable.</p>
+<p>The invalidity of one limitation does not automatically invalidate other provisions.</p>
+</div>
+</section>
+<section id="section-67" class="terms-section"><h2>67. User indemnity</h2>
+<p>Where you use Graft for business or professional purposes, and to the extent permitted by law, you agree to indemnify Graft against reasonable third-party claims, losses and costs arising directly from your unlawful use of Graft, fraudulent activity carried out through your account, documents you had no right to upload, infringement of another person's rights, unlawful processing of another person's personal information, or your material breach of these Terms.</p>
+<p>This provision does not require you to indemnify Graft for losses caused by Graft where liability cannot legally be transferred to you.</p>
+</section>
+<section id="section-68" class="terms-section"><h2>68. Force majeure and events outside our control</h2>
+<p>We are not responsible for a failure or delay caused by events outside our reasonable control to the extent permitted by law.</p>
+<p>Examples may include widespread internet outages, electricity failures, cloud-platform failures, natural disasters, war, civil disturbance, governmental action, major cyberattacks, telecommunications failures, labour disputes, epidemics, emergencies, or similar events.</p>
+<p>We will take reasonable steps to resume normal operation when practicable.</p>
+</section>
+<section id="section-69" class="terms-section"><h2>69. Changes to these Terms</h2>
+<p>We may update these Terms as Graft develops.</p>
+<p>Reasons may include new functionality, legal changes, regulatory changes, security requirements, changes to providers, changes to pricing models, operational changes, or clarification of existing terms.</p>
+<p>Where an update materially affects existing users, we will take reasonable steps to provide notice where appropriate.</p>
+<p>The date shown at the beginning of the Terms indicates the most recent revision.</p>
+</section>
+<section id="section-70" class="terms-section"><h2>70. Notices</h2>
+<p>We may provide notices through email, notices displayed within Graft, our website, account notifications, or another reasonable electronic method.</p>
+<p>You are responsible for maintaining a current email address associated with your account.</p>
+</section>
+<section id="section-71" class="terms-section"><h2>71. Assignment</h2>
+<p>You may not transfer your contractual rights under these Terms to another person without our consent where such consent is legally permitted to be required.</p>
+<p>We may transfer our rights and obligations in connection with incorporation of Graft, restructuring, financing, sale of the business, merger, acquisition, or transfer of the Service, provided that mandatory rights applicable to you are respected.</p>
+</section>
+<section id="section-72" class="terms-section"><h2>72. No partnership</h2>
+<p>These Terms do not create a partnership, joint venture, employment relationship, agency relationship, fiduciary relationship, or professional advisory relationship between you and Graft.</p>
+<p>Neither party may bind the other except where expressly authorised.</p>
+</section>
+<section id="section-73" class="terms-section"><h2>73. No third-party rights</h2>
+<p>Unless expressly provided otherwise, a person who is not a party to these Terms does not acquire contractual rights solely because they are mentioned in them.</p>
+</section>
+<section id="section-74" class="terms-section"><h2>74. No waiver</h2>
+<p>If we do not immediately enforce a provision of these Terms, that does not mean we have waived that provision.</p>
+<p>A waiver in one situation does not automatically operate as a waiver in another situation.</p>
+</section>
+<section id="section-75" class="terms-section"><h2>75. Severability</h2>
+<p>If any provision of these Terms is determined to be invalid, unlawful or unenforceable, that provision shall be interpreted or limited to the minimum extent necessary to make it enforceable where possible.</p>
+<p>The remaining provisions will continue in effect.</p>
+</section>
+<section id="section-76" class="terms-section"><h2>76. Headings</h2>
+<p>Section headings are included for convenience.</p>
+<p>They do not limit or change the substantive meaning of a provision.</p>
+</section>
+<section id="section-77" class="terms-section"><h2>77. Entire agreement</h2>
+<p>These Terms, together with our Privacy Policy, any applicable subscription terms, and any additional written terms expressly agreed between you and Graft, constitute the agreement governing your use of the Service.</p>
+<p>They replace earlier discussions or representations relating to the same subject matter, except where applicable law provides otherwise.</p>
+</section>
+<section id="section-78" class="terms-section"><h2>78. Conflicts between documents</h2>
+<p>If there is an inconsistency between these Terms and specific written commercial terms expressly agreed with you, the more specific agreed terms will normally prevail in relation to the subject matter they address.</p>
+<p>The Privacy Policy governs our handling of personal data.</p>
+<p>Mandatory law prevails over any inconsistent contractual provision.</p>
+</section>
+<section id="section-79" class="terms-section"><h2>79. Governing law</h2>
+<p>These Terms are governed by the laws of Ireland.</p>
+<p>Nothing in this section removes any mandatory legal rights concerning jurisdiction or applicable law that cannot lawfully be restricted.</p>
+</section>
+<section id="section-80" class="terms-section"><h2>80. Disputes</h2>
+<p>If a dispute arises, we encourage you to contact us first so that we can attempt to resolve it informally.</p>
+<p>You can contact <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a>.</p>
+<p>Subject to mandatory rights that cannot be restricted, disputes arising from these Terms or the Service shall be subject to the jurisdiction of the courts of Ireland.</p>
+</section>
+<section id="section-81" class="terms-section"><h2>81. Continuing provisions</h2>
+<p>Provisions that by their nature should continue after your account ends will continue to apply.</p>
+<p>These may include provisions concerning outstanding payments, intellectual property, confidentiality, disclaimers, professional-review obligations, limitation of liability, indemnities, dispute resolution, governing law, and any other term that is intended to operate after termination.</p>
+</section>
+<section id="section-82" class="terms-section"><h2>82. Contact</h2>
+<p>Questions about these Terms can be sent to:</p>
+<div class="callout">
+<strong>Graft</strong><br>
+Operated by <strong><span class="todo">ADD YOUR FULL LEGAL NAME</span>, trading as Graft</strong><br>
+Email: <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a><br>
+Address: <span class="todo">ADD YOUR ADDRESS</span>
+</div>
+</section>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Graft. All rights reserved.</span>
+    <a href="mailto:graftassistant.app@gmail.com">graftassistant.app@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>
